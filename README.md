@@ -1,7 +1,7 @@
 # jesusberumen
 
-Source of my personal site: research, projects, experience and education.
+Source of my personal site.
 
-The site is a single `index.html` with its fonts embedded, so there is no build step. Edit the file and push to `main`; GitHub Pages serves it from the repository root.
+The whole site is `index.html`, with no build step. Edit it and push to `main`; GitHub Pages serves it from the repository root.
 
-Text still marked with a dashed outline is a placeholder waiting for the final title, date or link.
+Text highlighted in yellow is still a placeholder. To add a photo, put it next to `index.html` as `photo.jpg`.
