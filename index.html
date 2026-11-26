@@ -35,6 +35,7 @@
   main li { margin-bottom: 6px; }
   .pub { margin-bottom: 20px; }
   .pub .title { font-weight: 600; }
+  .pub p { margin: 6px 0 0; }
   .muted { color: #666; }
   .todo { background: #fff3b0; }
   @media (max-width: 720px) {
@@ -62,19 +63,21 @@
 </aside>
 
 <main>
-<nav><a href="#about">About</a> | <a href="#research">Research</a> | <a href="#experience">Experience</a> | <a href="#education">Education</a></nav>
+<nav><a href="#about">About</a> | <a href="#research">Research</a> | <a href="#projects">Projects</a> | <a href="#experience">Experience</a> | <a href="#education">Education</a></nav>
 <hr>
 <h2 id="about">About me</h2>
 
 <p>Hi! I'm a physical engineer from the Universidad Autónoma de Ciudad Juárez, in Mexico. I currently work in data analytics and data engineering, and I'm applying to PhD programs for Fall 2027.</p>
 
-<p>My undergraduate research was on an LLM-based tutor for physics students, with Dr. Jorge López at UTEP. I built the training data, the evaluation of the tutor's answers and its safety checks. That work is now under review.</p>
+<p>For my undergraduate thesis, advised by Dr. Jorge A. López at UTEP, I built an AI tutor for a university electromagnetism course. I designed the pipeline that generated its training data, fine-tuned the model, evaluated the data and deployed the tutor as a web app. A paper on this work is under review.</p>
+
+<p>What stayed with me from that project is how hard it was to know when the model was right. My metrics could show that the data covered the course evenly, but not that a given answer was physically correct. I now want to work on models of physical systems that can tell you how much to trust them.</p>
 
 <p>I'm interested in:</p>
 <ul>
-  <li>Machine learning for scientific problems</li>
+  <li>Scientific machine learning</li>
   <li>Uncertainty quantification</li>
-  <li>Evaluating language models</li>
+  <li>Evaluating machine learning models, including language models</li>
 </ul>
 
 <hr>
@@ -93,23 +96,31 @@
 </div>
 
 <div class="pub">
-  <div class="title todo">[Thesis title]</div>
-  <div class="muted">Undergraduate thesis, UACJ, 2025.</div>
+  <div class="title">Implementation of an intelligent tutor based on large language models for university physics teaching</div>
+  <div><b>Jesús R. Berumen</b>. Advisor: Jorge A. López. Co-advisor: Gildardo Rivas.</div>
+  <div class="muted">Undergraduate thesis, Universidad Autónoma de Ciudad Juárez, May 2025. Original title in Spanish: <i>Implementación de un tutor inteligente basado en modelos de lenguaje de gran escala para la enseñanza de física universitaria</i>.</div>
+  <p>A tutor for Principles of Electromagnetism (PHYS 2321) at UTEP. I wrote three kinds of seed examples (worked problems, conceptual questions and corrections of common mistakes) and expanded them into about 610 tutoring conversations with a curriculum-driven method based on Self-Instruct and Evol-Instruct. I fine-tuned GPT-4.1-mini on that data and deployed the tutor with a Flask backend and a PostgreSQL database. The generated data covered the course evenly (normalized topic entropy of 0.997), and the whole pipeline cost US$39.12.</p>
 </div>
+
+<hr>
+<h2 id="projects">Projects</h2>
+<ul>
+  <li><a href="https://github.com/qgalinier/uncertainty-from-scratch"><b>Uncertainty from scratch</b></a>, in progress. The bootstrap, Gaussian processes and conformal prediction, implemented by hand and checked on whether their intervals reach the coverage they claim.</li>
+</ul>
 
 <hr>
 <h2 id="experience">Experience</h2>
 <ul>
-  <li><b>Wistron</b>, Manufacturing data analytics engineer, 2026 to present. Power BI models for OEE, scrap and yield, and automated reporting.</li>
-  <li><b>Break Remote</b>, Data engineer, 2025 to present. Python and BigQuery pipelines for the Meta and Google Ads APIs.</li>
-  <li><b>BRP (Can-Am)</b>, Data analyst, 2024 to 2025. Automated data collection and data-quality alerts.</li>
-  <li><b>Zahoree CX</b>, Support engineer and data analyst, 2022 to 2024.</li>
+  <li><b>Wistron</b>, Manufacturing data analytics engineer, 2026 to present. Power BI models for OEE, scrap and first-pass yield, with alerts when a metric crosses its threshold.</li>
+  <li><b>Break Remote</b>, Data engineer, 2025 to present. Python and BigQuery pipelines for the Meta and Google Ads APIs, with schema validation before ingestion.</li>
+  <li><b>BRP (Can-Am)</b>, Data analyst, 2024 to 2025. Automated data collection from APIs and ERP systems, and data-quality monitoring with automatic alerts that cut critical quality incidents by 25%.</li>
+  <li><b>Zahoree CX</b>, Support engineer and data analyst, 2022 to 2024. Root-cause analysis of support tickets that cut escalations by 40%.</li>
 </ul>
 
 <hr>
 <h2 id="education">Education</h2>
 <ul>
-  <li><b>B.Eng. in Physical Engineering</b>, Universidad Autónoma de Ciudad Juárez, 2019 to 2025.</li>
+  <li><b>B.Eng. in Physical Engineering</b>, Universidad Autónoma de Ciudad Juárez, 2019 to 2025. Coursework included statistical physics, physics of continuous media, quantum mechanics, probability and statistics, and big data processing.</li>
   <li>Data science course, Matsuo Iwasawa Lab, University of Tokyo. Recognized as an outstanding student.</li>
 </ul>
 
