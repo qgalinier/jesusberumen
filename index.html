@@ -8,46 +8,63 @@
 <style>
   body {
     margin: 0 auto;
-    max-width: 720px;
-    padding: 48px 20px 80px;
+    max-width: 1000px;
+    padding: 48px 24px 80px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: #222;
     background: #fff;
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 56px;
   }
-  h1 { font-size: 32px; font-weight: 600; margin: 0 0 8px; }
-  h2 { font-size: 22px; font-weight: 600; margin: 40px 0 12px; }
+  aside { position: sticky; top: 48px; align-self: start; }
+  aside img { display: block; width: 100%; height: auto; border-radius: 4px; background: #eee; }
+  aside h1 { font-size: 24px; font-weight: 600; line-height: 1.25; margin: 16px 0 4px; }
+  aside p { margin: 0 0 6px; color: #555; font-size: 15px; }
+  aside ul { list-style: none; padding: 0; margin: 16px 0 0; font-size: 15px; }
+  aside li { margin-bottom: 4px; }
+  main h2 { font-size: 22px; font-weight: 600; margin: 40px 0 12px; }
+  main h2:first-child { margin-top: 0; }
   a { color: #0645ad; text-decoration: none; }
   a:hover { text-decoration: underline; }
   hr { border: 0; border-top: 1px solid #ddd; margin: 32px 0 0; }
-  nav { color: #999; }
-  .intro { display: flex; gap: 24px; align-items: flex-start; margin-top: 24px; }
-  .intro img { width: 180px; height: auto; aspect-ratio: 896 / 1200; object-fit: cover; border-radius: 4px; flex: none; background: #eee; }
-  .intro p { margin: 0 0 8px; }
-  ul { padding-left: 20px; }
-  li { margin-bottom: 6px; }
+  nav { color: #999; margin-bottom: 8px; }
+  main ul { padding-left: 20px; }
+  main li { margin-bottom: 6px; }
   .pub { margin-bottom: 20px; }
   .pub .title { font-weight: 600; }
   .muted { color: #666; }
   .todo { background: #fff3b0; }
-  @media (max-width: 560px) { .intro { flex-direction: column; } }
+  @media (max-width: 720px) {
+    body { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-top: 32px; }
+    aside { position: static; display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 0 20px; align-items: start; }
+    aside img { grid-row: span 4; }
+    aside h1 { margin-top: 0; }
+    aside ul { margin-top: 8px; }
+  }
 </style>
 </head>
 <body>
 
-<h1>Jesús R. Berumen</h1>
-<nav><a href="#about">About</a> | <a href="#research">Research</a> | <a href="#experience">Experience</a> | <a href="#education">Education</a></nav>
+<aside>
+  <img src="photo.jpg" alt="Photo of Jesús R. Berumen" width="540" height="723">
+  <h1>Jesús R. Berumen</h1>
+  <p>Physical engineer, data engineer</p>
+  <p>Ciudad Juárez, Mexico</p>
+  <ul>
+    <li>m3dr4no [at] gmail [dot] com</li>
+    <li><a href="https://github.com/qgalinier">GitHub</a></li>
+    <li><a href="#" class="todo">LinkedIn</a></li>
+    <li><a href="cv.pdf" class="todo">CV</a></li>
+  </ul>
+</aside>
 
+<main>
+<nav><a href="#about">About</a> | <a href="#research">Research</a> | <a href="#experience">Experience</a> | <a href="#education">Education</a></nav>
 <hr>
 <h2 id="about">About me</h2>
-<div class="intro">
-  <img src="photo.jpg" alt="Photo of Jesús R. Berumen" onerror="this.remove()">
-  <div>
-    <p><a href="https://github.com/qgalinier">GitHub</a> | <a href="#" class="todo">LinkedIn</a> | <a href="cv.pdf" class="todo">CV</a></p>
-    <p>m3dr4no [at] gmail [dot] com</p>
-  </div>
-</div>
 
 <p>Hi! I'm a physical engineer from the Universidad Autónoma de Ciudad Juárez, in Mexico. I currently work in data analytics and data engineering, and I'm applying to PhD programs for Fall 2027.</p>
 
@@ -96,5 +113,6 @@
   <li>Data science course, Matsuo Iwasawa Lab, University of Tokyo. Recognized as an outstanding student.</li>
 </ul>
 
+</main>
 </body>
 </html>
