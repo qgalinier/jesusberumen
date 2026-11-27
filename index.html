@@ -38,14 +38,14 @@
   .pub p { margin: 6px 0 0; }
   .muted { color: #666; }
   .todo { background: #fff3b0; }
-  aside img.cat { width: 120px; margin-top: 28px; background: none; border-radius: 0; image-rendering: pixelated; }
+  img.cat { float: right; width: 200px; height: auto; margin: 0 0 8px 24px; image-rendering: pixelated; }
   @media (max-width: 720px) {
     body { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-top: 32px; }
     aside { position: static; display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 0 20px; align-items: start; }
     aside img { grid-row: span 4; }
     aside h1 { margin-top: 0; }
     aside ul { margin-top: 8px; }
-    aside img.cat { display: none; }
+    img.cat { width: 140px; }
   }
 </style>
 </head>
@@ -62,12 +62,12 @@
     <li><a href="#" class="todo">LinkedIn</a></li>
     <li><a href="cv.pdf" class="todo">CV</a></li>
   </ul>
-  <img class="cat" src="cat.png" alt="A cat drawn in Paint" width="200" height="170">
 </aside>
 
 <main>
 <nav><a href="#about">About</a> | <a href="#research">Research</a> | <a href="#projects">Projects</a> | <a href="#experience">Experience</a> | <a href="#education">Education</a></nav>
 <hr>
+<img class="cat" src="cat.png" alt="A cat drawn in Paint" width="300" height="200">
 <h2 id="about">About me</h2>
 
 <p>Hi! I'm a physical engineer from the Universidad Autónoma de Ciudad Juárez, in Mexico. I work in data analytics and data engineering, and I'm applying to PhD programs for Fall 2027.</p>
